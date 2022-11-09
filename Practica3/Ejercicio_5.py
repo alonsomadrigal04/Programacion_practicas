@@ -3,6 +3,5 @@ lista = []
 while n > 0:
     resto = n % 10
     n //= 10
-    n //= 10
     lista = [resto] + lista
 print(lista)

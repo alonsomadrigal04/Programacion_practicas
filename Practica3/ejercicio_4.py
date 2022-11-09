@@ -8,6 +8,7 @@ while len(cadena) != 4:
         digito = str(randint(1, 9))
     cadena += digito
 
+# Bucle principal
 res = str(input("Se ha generado un código de cuatro dígitos, ¡intenta acertarlo!: "))
 while res != cadena:
     toros = 0

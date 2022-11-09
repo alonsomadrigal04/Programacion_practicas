@@ -1,8 +1,11 @@
+# entradas y variables
 cadena = input("Dime una frase: ")
 cadena_2 = ""
 palabra = ""
 anterior = " "
 cont = 2
+
+# bucle
 for letra in cadena:
     if letra != " ":  # Es letra
         palabra += letra
