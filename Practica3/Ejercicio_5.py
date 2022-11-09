@@ -5,3 +5,4 @@ while n > 0:
     n //= 10
     lista = [resto] + lista
 print(lista)
+
