@@ -3,16 +3,17 @@ from prac04ej04 import contenido_GC
 from prac04ej05 import expansion_triplete_CAG
 
 
-def menu_ADN (adn):
+def menu_ADN(adn):
     print("------------------------------------------------\n(1). Porcentaje de G C de una secuencia\n(2). Máximo número de"
           "repeticiones consecutivas de un patron\n------------------------------------------------\n")
     res = int(input("Elija una opción: "))
+    while res not in [1, 2]:
+        res = int(input(("Opción no valida, elija de nuevo: ")))
     if res == 1:
         print(contenido_GC(adn))
     elif res == 2:
         print(expansion_triplete_CAG(adn))
-    else:
-        return "opción no valida"
+    return
 
 
 
