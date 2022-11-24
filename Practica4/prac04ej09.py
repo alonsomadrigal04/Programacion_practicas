@@ -1,7 +1,26 @@
 from modulo_test import test
 
 def sumar_lista_digitos (lista1, lista2):
-    # El código de la función debe ir aquí
+    cont = len(lista1) -1
+    cont2 = len(lista2) -1
+    dig = 0
+    dig2 = 0
+    if cont != cont2:
+        lista_final = None
+    else:
+        for num in lista1:
+            dig += num * 10 ** cont
+            cont -= 1
+        for num in lista2:
+            dig2 += num * 10 ** cont2
+            cont2 -= 1
+        n = dig + dig2
+        lista_final = []
+        while n > 0:
+            resto = n % 10
+            n //= 10
+            lista_final = [resto] + lista_final
+    return lista_final
 
 # –- Programa principal –-
 # Ejecutar el test sólo al ejecutar el fichero (y no al importarlo)

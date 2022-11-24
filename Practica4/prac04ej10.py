@@ -3,9 +3,11 @@ def leer_matriz_enteros():
     M = []
     for i in range(n):
         M.append([0] * n)
+        print(M)
     for f in range(n):
         for c in range(n):
             M[f][c] = int(input("Dime el valor: {0} {1}: ".format(f, c)))
+    return M
 
 def mostrar_matriz_enteros(matriz):
     for i in range(len(matriz)):
