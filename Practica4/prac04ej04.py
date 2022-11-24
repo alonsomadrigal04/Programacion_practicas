@@ -1,6 +1,6 @@
 from modulo_test import test
 
-def contenido_GC (adn):
+def contenido_GC(adn):
     suma = 0
     for elem in adn:
         if elem == "G" or elem == "C":

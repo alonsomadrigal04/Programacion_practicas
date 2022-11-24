@@ -1,11 +1,25 @@
-from modulo_test import test
-from ... import contenido_GC
-from ... import expansion_triplete_CAG
+#from modulo_test import test
+from prac04ej04 import contenido_GC
+from prac04ej05 import expansion_triplete_CAG
 
-def menu_ADN ():
-    # El código de la función debe ir aquí
+
+def menu_ADN (adn):
+    print("------------------------------------------------\n(1). Porcentaje de G C de una secuencia\n(2). Máximo número de"
+          "repeticiones consecutivas de un patron\n------------------------------------------------\n")
+    res = int(input("Elija una opción: "))
+    if res == 1:
+        print(contenido_GC(adn))
+    elif res == 2:
+        print(expansion_triplete_CAG(adn))
+    else:
+        return "opción no valida"
+
+
 
 # –- Programa principal –-
 # Ejecutar el test sólo al ejecutar el fichero (y no al importarlo)
-if __name__== '__main__':
+#if __name__== '__main__':
     # El código del programa principal debe ir aquí
+
+adn = input("Escriba su secuencia de adn: ")
+menu_ADN(adn)
