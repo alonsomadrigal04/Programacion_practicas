@@ -1,10 +1,30 @@
 from modulo_test import test
 
 def es_cuadrado_latino (matriz):
-    # El código de la función debe ir aquí
-
-# –- Programa principal –-
-# Ejecutar el test sólo al ejecutar el fichero (y no al importarlo)
+    nf = len(matriz)
+    nc = len(matriz[0])
+    es_cuadrado_latino = True
+    fil = 0
+    while fil < nf and es_cuadrado_latino:
+        col = 0
+        while col < nc and es_cuadrado_latino:
+            if matriz[fil][col]<1 or matriz[fil][col]>nf:
+                print("El numero", matriz[fil][col], "no es valido")
+                es_cuadrado_latino = False
+            elif matriz[fil][col] in matriz[fil][col+1:]:
+                print("El número", matriz[fil][col], "ya esta en la fila", fil)
+                es_cuadrado_latino = False
+            else:
+                resto_fil = fil+1
+                while resto_fil<nf and es_cuadrado_latino:
+                    if matriz[fil][col] == matriz[resto_fil][col]:
+                        print("el numero", matriz[fil][col], "ya esta en la columna", col)
+                        es_cuadrado_latino = False
+                    else:
+                        resto_fil += 1
+            col += 1
+        fil += 1
+    return es_cuadrado_latino
 if __name__== '__main__':
     # Código para ejecutar la función con los datos de prueba
     #    ¡¡SE PUEDE COMENTAR LÍNEAS PERO NO MODIFICARLAS!!
