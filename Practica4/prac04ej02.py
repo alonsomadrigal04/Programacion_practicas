@@ -1,6 +1,7 @@
 from modulo_test import test
 
-def divisores (n):
+
+def divisores(n):
     res = []
     for num in range(1, n//2 + 1):
         if n % num == 0:
@@ -8,7 +9,8 @@ def divisores (n):
     res.append(n)
     return res
 
-if __name__== '__main__':
+
+if __name__ == '__main__':
     # Código para ejecutar la función con los datos de prueba
     #    ¡¡SE PUEDE COMENTAR LÍNEAS PERO NO MODIFICARLAS!!    
     test(divisores(1) == [1])
